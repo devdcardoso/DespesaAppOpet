@@ -23,21 +23,25 @@
         android:inputType="numberDecimal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-    <EditText
+
+    <SeekBar
+        android:id="@+id/seekPessoas"
         android:layout_marginTop="25dp"
-        android:id="@+id/editPessoa"
-        android:hint="Digite a quantidade de pessoas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:min="1"
+        android:max="20"
+        android:progress="1"
+        />
+
+    <TextView
+        android:id="@+id/textPessoas"
+        android:text="1"
         android:textAlignment="center"
-        android:inputType="number"
+        android:textSize="20sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-    <Button
-        android:onClick="dividirDespesa"
-        android:layout_marginTop="25dp"
-        android:layout_gravity="center"
-        android:text="DIVIDIR"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+
     <TextView
         android:id="@+id/textDivisao"
         android:textAlignment="center"

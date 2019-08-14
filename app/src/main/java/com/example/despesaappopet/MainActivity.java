@@ -5,14 +5,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.SeekBar;
 import android.widget.TextView;
 
 import java.text.DecimalFormat;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText editValor, editPessoa;
-    private TextView textDivisao;
+    private EditText editValor;
+    private TextView textDivisao, textPessoas;
+    private SeekBar seekPessoas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,11 +22,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         editValor = findViewById(R.id.editValor);
-        editPessoa = findViewById(R.id.editPessoa);
+        textPessoas = findViewById(R.id.textPessoas);
         textDivisao = findViewById(R.id.textDivisao);
+        seekPessoas = findViewById(R.id.seekPessoas);
     }
 
-    public void dividirDespesa(View view) {
+    /*public void dividirDespesa(View view) {
         double valor = Double.parseDouble(editValor.getText().toString());
         double pessoas = Double.parseDouble(editPessoa.getText().toString());
         double resultado = valor / pessoas;
@@ -34,5 +37,5 @@ public class MainActivity extends AppCompatActivity {
         String exibir = "R$ " + df.format(resultado);
 
         textDivisao.setText(exibir);
-    }
+    }*/
 }
